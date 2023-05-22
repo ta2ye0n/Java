@@ -6,25 +6,38 @@ import java.io.IOException; // BufferedReader를 사용하면 IOExcption이나 t
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer; // 공백 단위 데이터 가공
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 백준 11021번
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        // 백준 11022번
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
 
-        int a = Integer.parseInt(br.readLine());
+        for (int i = 0; i < n; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
 
-        StringBuilder sb = new StringBuilder();
-        StringTokenizer st;
-
-        for (int i = 1; i <= a; i++) {
-            st = new StringTokenizer(br.readLine()," ");
-            sb.append("Case #").append(i).append(": ")
-                    .append(Integer.parseInt(st.nextToken())
-                            +Integer.parseInt(st.nextToken())).append('\n');
+            System.out.println("Case #"+(i+1)+": "+ a + " + " + b + " = " + (a + b));
         }
-        br.close();
-        System.out.println(sb);
+        in.close();
+
+        // 백준 11021번
+//        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+//
+//        int a = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//        StringTokenizer st;
+//
+//        for (int i = 1; i <= a; i++) {
+//            st = new StringTokenizer(br.readLine()," ");
+//            sb.append("Case #").append(i).append(": ")
+//                    .append(Integer.parseInt(st.nextToken())
+//                            +Integer.parseInt(st.nextToken())).append('\n');
+//        }
+//        br.close();
+//        System.out.println(sb);
 
         // 백준 15552번
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
