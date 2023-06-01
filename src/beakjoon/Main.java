@@ -9,18 +9,77 @@ import java.util.StringTokenizer; // 공백 단위 데이터 가공
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        // 백준 11022번
+    public static void main(String args[]) throws IOException {
+        // 백준 10871번
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
 
-        for (int i = 0; i < n; i++) {
+        int N = in.nextInt();
+        int X = in.nextInt();
+        int arr[] = new int[N];
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = in.nextInt();
+        }
+
+        in.close();
+
+        for (int i = 0; i < N; i++) {
+            if (arr[i] < X) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+
+        // 백준 10807번
+//        Scanner sc = new Scanner(System.in);
+//        int N = sc.nextInt();
+//        int[] array = new int[N];
+//        int cnt = 0;
+//
+//        for(int i = 0; i < N; i++) {
+//            array[i] = sc.nextInt();
+//        }
+//
+//        int v= sc.nextInt();
+//
+//        for(int i = 0; i < array.length; i++) {
+//            if (v == array[i]){
+//                cnt++;
+//            }
+//        }
+//
+//        System.out.println(cnt);
+
+       // 백준 10951번
+        /*Scanner in = new Scanner((System.in));
+        while (in.hasNextInt()){
             int a = in.nextInt();
             int b = in.nextInt();
 
-            System.out.println("Case #"+(i+1)+": "+ a + " + " + b + " = " + (a + b));
+            System.out.println(a + b);
         }
-        in.close();
+        in.close();*/
+
+        //백준 10952번
+//        Scanner in = new Scanner((System.in));
+//        while (true){
+//            int a = in.nextInt();
+//            int b = in.nextInt();
+//            if(a==0 && b==0)
+//                break;
+//            System.out.println(a + b);
+//        }
+
+        // 백준 11022번
+//        Scanner in = new Scanner(System.in);
+//        int n = in.nextInt();
+//
+//        for (int i = 0; i < n; i++) {
+//            int a = in.nextInt();
+//            int b = in.nextInt();
+//
+//            System.out.println("Case #"+(i+1)+": "+ a + " + " + b + " = " + (a + b));
+//        }
+//        in.close();
 
         // 백준 11021번
 //        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
