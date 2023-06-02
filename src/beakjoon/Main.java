@@ -10,24 +10,45 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) throws IOException {
-        // 백준 10871번
+        // 백준 10818번
         Scanner in = new Scanner(System.in);
 
-        int N = in.nextInt();
-        int X = in.nextInt();
-        int arr[] = new int[N];
+        int n = in.nextInt();
+        int min = 1000000, max = 0;
+        int arr[] = new int[n];
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
         }
-
-        in.close();
-
-        for (int i = 0; i < N; i++) {
-            if (arr[i] < X) {
-                System.out.print(arr[i] + " ");
-            }
+        for (int i = 0; i < n; i++) {
+            if(arr[i]<min)
+                min = arr[i];
         }
+        for (int i = 0; i < n; i++) {
+            if (arr[i]>max)
+                max = arr[i];
+        }
+        System.out.print(min + " ");
+        System.out.println(max);
+
+        // 백준 10871번
+//        Scanner in = new Scanner(System.in);
+//
+//        int N = in.nextInt();
+//        int X = in.nextInt();
+//        int arr[] = new int[N];
+//
+//        for (int i = 0; i < N; i++) {
+//            arr[i] = in.nextInt();
+//        }
+//
+//        in.close();
+//
+//        for (int i = 0; i < N; i++) {
+//            if (arr[i] < X) {
+//                System.out.print(arr[i] + " ");
+//            }
+//        }
 
         // 백준 10807번
 //        Scanner sc = new Scanner(System.in);
